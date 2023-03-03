@@ -1,0 +1,82 @@
+destination: reference
+
+# website will be referenced on https://pkgs.rstudio.com/
+# Open a PR in https://github.com/rstudio/pkgs.rstudio.com
+url: https://pkgs.rstudio.com/distill/
+
+template:
+  package: tidytemplate
+  bootstrap: 5
+  bslib:
+    primary: "#096B72"
+    navbar-background: "#e6f3fc"
+  trailing_slash_redirect: true
+  opengraph:
+    image:
+      src: man/figures/logo.png
+      alt: "distill package"
+    twitter:
+      creator: "@rstudio"
+      card: summary
+
+home:
+  links:
+  - text: Learn more about R Markdown
+    href: "https://rmarkdown.rstudio.com"
+
+# custom footer for rmarkdown ecosystem
+footer:
+  structure:
+    left: [rmd]
+    right: [developed_by, p, built_with]
+  components:
+      p: "\n\n"
+      rmd: |
+        **distill** is a part of the **R Markdown** ecosystem of packages for creating
+        computational documents in R.<br>Learn more at
+        [rmarkdown.rstudio.com](https://rmarkdown.rstudio.com/).
+
+# structure of website themed for R Markdown ecosystem
+navbar:
+  structure:
+    left:  [intro, examples, articles, reference, news]
+  components:
+    examples:
+      text: Examples
+      href: articles/examples.html
+
+# Add articles menu using
+# https://pkgdown.r-lib.org/dev/reference/build_articles.html#index-and-navbar
+# articles:
+
+news:
+  releases:
+  - text: "No blog post"
+  # - text: Version 0.2
+  #   href: <url>
+
+reference:
+- title: Output formats
+  desc: >
+    Specify in your document's YAML frontmatter to knit,
+    or specify as the `output_format` with `rmarkdown::render()`.
+  contents:
+  - '`distill_article`'
+  - '`distill_website`'
+- title: Create articles and websites
+  contents:
+  - '`create_article`'
+  - '`create_website`'
+  - '`create_blog`'
+- title: Create blog posts
+  contents:
+  - '`create_post`'
+  - '`import_post`'
+  - '`update_post`'
+  - '`rename_post_dir`'
+- title: Create a theme to add to an article or website
+  contents:
+  - '`create_theme`'
+- title: Publish a website
+  contents:
+  - '`publish_website`'

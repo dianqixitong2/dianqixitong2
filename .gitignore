@@ -1,0 +1,11 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+scratch
+rsconnect
+.DS_Store
+*_cache
+issues
+dev
+reference
